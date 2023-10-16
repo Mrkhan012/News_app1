@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:untitled/screens/home_screen.dart';
 import 'package:untitled/utils/colors.dart';
 
@@ -17,7 +18,12 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 3), () {
-      print("Navigating to LoginScreen");
+      const Center(
+        child: SpinKitCircle(
+          color: roseWood,
+        ),
+      );
+
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
